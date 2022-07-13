@@ -2,12 +2,15 @@ package com.ebrightmoon.ffmpeg;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
-import android.text.method.ScrollingMovementMethod;
 import android.view.View;
-import android.widget.TextView;
 
+import com.ebrightmoon.ffmpeg.camera.CameraActivity;
 import com.ebrightmoon.ffmpeg.databinding.ActivityMainBinding;
+import com.ebrightmoon.ffmpeg.player.FFmpegPlayerActivity;
+import com.ebrightmoon.ffmpeg.video.MediaPlayerActivity;
+import com.ebrightmoon.ffmpeg.video.VideoActivity;
 import com.ebrightmoon.ffmpeg.view.PlayerView;
 
 public class MainActivity extends AppCompatActivity {
@@ -17,8 +20,8 @@ public class MainActivity extends AppCompatActivity {
     private ActivityMainBinding binding;
     private PlayerView playerView;
     private StringBuilder stringBuilder;
-//    private String url="https://www.w3school.com.cn/example/html5/mov_bbb.mp4";
-    private String url="/storage/emulated/0/big_buck_bunny.mp4";
+    //    private String url="https://www.w3school.com.cn/example/html5/mov_bbb.mp4";
+    private String url = "/storage/emulated/0/big_buck_bunny.mp4";
 //    private String url="rtsp://wowzaec2demo.streamlock.net/vod/mp4:BigBuckBunny_115k.mov";
 
     @Override
@@ -62,6 +65,35 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 playerView.play(url);
+            }
+        });
+
+
+        binding.camera.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, CameraActivity.class));
+            }
+        });
+
+        binding.video.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, VideoActivity.class));
+            }
+        });
+
+        binding.ffmpeg.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, FFmpegPlayerActivity.class));
+            }
+        });
+
+        binding.mediaPlayer.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, MediaPlayerActivity.class));
             }
         });
     }
