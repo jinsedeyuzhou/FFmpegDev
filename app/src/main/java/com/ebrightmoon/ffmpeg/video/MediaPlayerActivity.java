@@ -48,7 +48,6 @@ public class MediaPlayerActivity extends AppCompatActivity implements MediaPlaye
 
     private void initView() {
 
-        MediaCodec mediaCodec;
         holder = binding.surfaceView.getHolder();
         holder.addCallback(this);
         holder.setFixedSize(320, 220);

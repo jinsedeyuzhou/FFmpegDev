@@ -1,5 +1,7 @@
 //
 // Created by wyy on 2022/7/6.
+// 命名规则
+//https://zh-google-styleguide.readthedocs.io/en/latest/google-cpp-styleguide/naming/
 //
 #ifndef FFMPEGDEV_COMMON_DEFINE_H
 #define FFMPEGDEV_COMMON_DEFINE_H

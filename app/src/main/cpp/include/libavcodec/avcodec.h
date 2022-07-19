@@ -5350,7 +5350,8 @@ int av_parser_parse2(AVCodecParserContext *s,
 int av_parser_change(AVCodecParserContext *s,
                      AVCodecContext *avctx,
                      uint8_t **poutbuf, int *poutbuf_size,
-                     const uint8_t *buf, int buf_size, int keyframe);
+                     const uint8_t *buf, int buf_size, int
+                     );
 void av_parser_close(AVCodecParserContext *s);
 
 /**
